@@ -1,0 +1,10 @@
+mat-grid-tile {
+    background: white;
+}
+
+main{
+    padding: 10px;
+    text-align: center;
+    height:85vh;
+    overflow: scroll;
+}

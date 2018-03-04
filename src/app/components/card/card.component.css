@@ -1,0 +1,29 @@
+:host {
+  /* margin: 5px; */
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-size: cover;
+  background-position:center;
+}
+
+mat-card-content{
+    overflow: scroll;
+    text-align: left;
+    min-height: 90px;
+}
+
+.zoom{
+    overflow: hidden;
+}
+.zoom>img{
+    transition: transform .5s ease;
+}
+
+.zoom>img:hover{
+    transform: scale(1.3);
+}

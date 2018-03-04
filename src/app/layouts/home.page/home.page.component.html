@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Insta Life</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span>@groulite : Live Leran Love</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<main>
+  <div *ngIf="!isLoggedIn">
+    <a mat-raised-button color="primary" [href]="loginURL">
+      Connect
+      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+    </a>
+    <!--   <a mat-raised-button color="accent">Connect</a>
+  <a mat-raised-button color="warn">Connect</a>
+  <a mat-raised-button color="disabled">Connect</a>
+  <a mat-raised-button color="link">Connect</a> -->
+  </div>
+
+  <div *ngIf="isLoggedIn">
+    <mat-grid-list cols="4" rowHeight="2:3" gutterSize="5">
+      <mat-grid-tile *ngFor="let post of medias">
+        <cmc-card [post]="post"></cmc-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+</main>
